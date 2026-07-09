@@ -11,6 +11,11 @@ function renderTimeline() {
       </div>
       <div class="timeline-title">${item.title}</div>
       <div class="timeline-subtitle">${item.subtitle}</div>
+      ${item.docUrl
+        ? `<a href="${item.docUrl}" target="_blank" rel="noopener" class="timeline-view-btn">
+             <i class="fas fa-eye"></i> View
+           </a>`
+        : ''}
     </div>
   `).join('');
 }

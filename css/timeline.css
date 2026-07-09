@@ -71,4 +71,24 @@
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.timeline-view-btn:hover {
+  background: var(--accent);
+  color: #fff;
 }

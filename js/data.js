@@ -22,7 +22,8 @@ const timelineData = [
     date: "Feb 2021",
     title: "Quality Assurance Tester",
     subtitle: "Creotec Philippines Inc. · Internship · Laguna, Calabarzon · Remote",
-    badge: "Internship"
+    badge: "Internship",
+    docUrl: "images/Education&Experience/Creotec_Work_Immersion.jpg"
   },
   {
     date: "2021 – 2025",
@@ -31,7 +32,7 @@ const timelineData = [
     badge: "Education"
   }
   // Add more entries here:
-  // { date: "...", title: "...", subtitle: "...", badge: "..." }
+  // { date: "...", title: "...", subtitle: "...", badge: "...", docUrl: "images/Education&Experience/filename.jpg" }
 ];
 
 
