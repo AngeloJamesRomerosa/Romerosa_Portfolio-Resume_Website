@@ -11,10 +11,13 @@ function renderTimeline() {
       </div>
       <div class="timeline-title">${item.title}</div>
       <div class="timeline-subtitle">${item.subtitle}</div>
-      ${item.docUrl
-        ? `<a href="${item.docUrl}" target="_blank" rel="noopener" class="timeline-view-btn">
-             <i class="fas fa-eye"></i> View
-           </a>`
+      ${item.docs && item.docs.length
+        ? `<div class="timeline-docs">
+             ${item.docs.map(doc => `
+               <a href="${doc}" target="_blank" rel="noopener" class="timeline-doc-thumb">
+                 <img src="${doc}" alt="Document" />
+               </a>`).join('')}
+           </div>`
         : ''}
     </div>
   `).join('');
@@ -23,19 +26,25 @@ function renderTimeline() {
 function renderCerts() {
   document.getElementById('certsGrid').innerHTML = certsData.map(c => `
     <div class="cert-card">
-      <div class="cert-logo">
-        ${c.logoUrl
-          ? `<img src="${c.logoUrl}" alt="${c.issuer}" />`
-          : `<span style="font-size:1.6rem">${c.icon}</span>`}
+      ${c.certImage
+        ? `<div class="cert-preview">
+             <img src="${c.certImage}" alt="${c.title}" />
+           </div>`
+        : `<div class="cert-logo">
+             ${c.logoUrl
+               ? `<img src="${c.logoUrl}" alt="${c.issuer}" />`
+               : `<span style="font-size:1.6rem">${c.icon}</span>`}
+           </div>`}
+      <div class="cert-card-body">
+        <div class="cert-issuer">${c.issuer}</div>
+        <div class="cert-title">${c.title}</div>
+        <div class="cert-date">${c.date}</div>
+        ${c.certUrl
+          ? `<a href="${c.certUrl}" target="_blank" rel="noopener" class="cert-view-btn">
+               <i class="fas fa-eye"></i> View
+             </a>`
+          : ''}
       </div>
-      <div class="cert-issuer">${c.issuer}</div>
-      <div class="cert-title">${c.title}</div>
-      <div class="cert-date">${c.date}</div>
-      ${c.certUrl
-        ? `<a href="${c.certUrl}" target="_blank" rel="noopener" class="cert-view-btn">
-             <i class="fas fa-eye"></i> View
-           </a>`
-        : ''}
     </div>
   `).join('');
 }

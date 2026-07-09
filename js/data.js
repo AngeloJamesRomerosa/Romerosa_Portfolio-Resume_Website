@@ -5,6 +5,8 @@
 // ── EDUCATION & EXPERIENCE ─────────────────────────────────────
 // badge: use "current" (lowercase) for the green highlight,
 //        or any other string like "Internship", "Education"
+// docs : array of image/PDF paths shown as small thumbnails inline
+//        e.g. docs: ["images/Education&Experience/cert1.jpg", "images/Education&Experience/cert2.jpg"]
 const timelineData = [
   {
     date: "Apr 2026 – Present",
@@ -22,24 +24,33 @@ const timelineData = [
     date: "2021 – 2025",
     title: "BS Computer Science — Major in Intelligent Systems",
     subtitle: "De La Salle University - Dasmariñas",
-    badge: "Education"
+    badge: "Education",
+    docs: [
+      "images/Education&Experience/De_La_Salle_University_Dasmariñas/DeansHonor_1stYear_1stSem_2021_2022.jpg",
+      "images/Education&Experience/De_La_Salle_University_Dasmariñas/DeansHonor_1stYear_2ndSem_2021_2022.jpg",
+      "images/Education&Experience/De_La_Salle_University_Dasmariñas/DeansHonor_2ndYear_1stSem_2022_2023.jpg",
+      "images/Education&Experience/De_La_Salle_University_Dasmariñas/DeansHonor_2ndYear_2ndSem_2022_2023.jpg",
+      "images/Education&Experience/De_La_Salle_University_Dasmariñas/DeansHonor_3rdYear_2ndSem_2023_2024.jpg",
+      "images/Education&Experience/De_La_Salle_University_Dasmariñas/DeansHonor_4thYear_1stSem_2024_2025.jpg"
+    ]
   },
   {
     date: "Feb 2021",
     title: "Quality Assurance Tester",
     subtitle: "Creotec Philippines Inc. · Internship · Laguna, Calabarzon · Remote",
     badge: "Internship",
-    docUrl: "images/Education&Experience/Creotec_Work_Immersion.jpg"
+    docs: ["images/Education&Experience/Creotec_Work_Immersion.jpg"]
   }
   // Add more entries here:
-  // { date: "...", title: "...", subtitle: "...", badge: "...", docUrl: "images/Education&Experience/filename.jpg" }
+  // { date: "...", title: "...", subtitle: "...", badge: "...", docs: ["images/Education&Experience/file.jpg"] }
 ];
 
 
 // ── CERTIFICATIONS ─────────────────────────────────────────────
-// icon   : emoji fallback shown when logoUrl is empty
-// logoUrl: URL to a logo — use a CDN URL, or a local file in images/certifications/
-// certUrl: link to the certificate image/PDF — set to "" to hide the View button
+// icon     : emoji fallback when no logoUrl
+// logoUrl  : small issuer logo (CDN URL or local file)
+// certImage: the actual certificate image shown large on the card
+// certUrl  : what opens when View is clicked (usually same as certImage)
 const certsData = [
   {
     issuer: "Cisco",
@@ -47,7 +58,8 @@ const certsData = [
     date: "April 2025",
     icon: "🔵",
     logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png",
-    certUrl: ""  // add path to cert image/PDF here, e.g. "images/certifications/linux-essentials.jpg"
+    certImage: "images/certifications/Cisco Linux Essentials.jpg",
+    certUrl: "images/certifications/Cisco Linux Essentials.jpg"
   },
   {
     issuer: "Cisco",
@@ -55,18 +67,20 @@ const certsData = [
     date: "April 2025",
     icon: "🔵",
     logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png",
-    certUrl: ""  // add path to cert image/PDF here
+    certImage: "images/certifications/Cisco Introduction to Cybersecurity.jpg",
+    certUrl: "images/certifications/Cisco Introduction to Cybersecurity.jpg"
   },
   {
     issuer: "Cisco",
     title: "Networking Basics",
     date: "May 2025",
     icon: "🔵",
-    logoUrl: "images/certifications/Cisco Networking Basics.jpg",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png",
+    certImage: "images/certifications/Cisco Networking Basics.jpg",
     certUrl: "images/certifications/Cisco Networking Basics.jpg"
   }
   // Add more certifications:
-  // { issuer: "Google", title: "Associate Cloud Engineer", date: "Jan 2026", icon: "🟢", logoUrl: "images/certifications/google.png" }
+  // { issuer: "Google", title: "...", date: "...", icon: "🟢", logoUrl: "...", certImage: "images/certifications/file.jpg", certUrl: "images/certifications/file.jpg" }
 ];
 
 

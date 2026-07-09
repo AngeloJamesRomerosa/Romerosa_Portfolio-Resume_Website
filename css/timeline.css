@@ -74,21 +74,32 @@
   margin-bottom: 0.5rem;
 }
 
-.timeline-view-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.4rem;
-  padding: 0.3rem 0.85rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  text-decoration: none;
-  transition: all 0.2s;
+/* Small doc thumbnails shown inline under a timeline entry */
+.timeline-docs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
 }
-.timeline-view-btn:hover {
-  background: var(--accent);
-  color: #fff;
+
+.timeline-doc-thumb {
+  width: 76px;
+  height: 56px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: all 0.2s;
+  display: block;
+}
+.timeline-doc-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.timeline-doc-thumb:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  transform: translateY(-2px);
 }
