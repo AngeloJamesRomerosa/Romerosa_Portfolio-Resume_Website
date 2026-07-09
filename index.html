@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angelo James Romerosa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="particles"></canvas>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#hero" class="nav-brand">Angelo Romerosa</a>
+    <ul class="nav-links">
+      <li><a href="#education">Education &amp; Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#techstack">Tech Stack</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode"></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="section-wrapper">
+    <section id="hero">
+      <div class="hero-inner">
+
+        <div class="hero-photo">
+          <!--
+            TO ADD YOUR PHOTO:
+            1. Copy your image into images/hero/ (e.g. images/hero/photo.jpg)
+            2. Change src="" to src="images/hero/photo.jpg"
+            3. Delete the style="display:none" attribute
+          -->
+          <img src="images/hero/me.jpg" alt="Angelo James Romerosa" />
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-greeting">Hi 👋,</p>
+          <h1 class="hero-name">I'm <span>Angelo</span>,</h1>
+          <p class="hero-role"><span class="typed" id="typewriter"></span><span class="cursor"></span></p>
+          <p class="hero-bio">
+            A passionate individual driven to keep growing in software development and AI.
+            Good at solving problems, exploring new technologies, and building innovative projects
+            with a vision to continuously expand my capabilities.
+          </p>
+          <p class="hero-location">
+            <i class="fas fa-map-marker-alt"></i>
+            Imus, Calabarzon, Philippines
+          </p>
+          <div class="hero-buttons">
+            <a href="#contacts" class="btn btn-outline">Contacts</a>
+            <!--
+              TO ADD YOUR RESUME:
+              1. Copy your PDF into this folder (e.g. resume.pdf)
+              2. Change href="#" to href="resume.pdf"
+            -->
+            <a href="#" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- EDUCATION & EXPERIENCE -->
+  <div class="section-wrapper">
+    <section id="education">
+      <h2 class="section-title">Education &amp; <span>Experience</span></h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section-wrapper">
+    <section id="certifications">
+      <h2 class="section-title"><span>Certifications</span></h2>
+      <div class="certs-grid" id="certsGrid"></div>
+    </section>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section-wrapper">
+    <section id="projects">
+      <h2 class="section-title"><span>Projects</span></h2>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+  </div>
+
+  <!-- TECH STACK -->
+  <div class="section-wrapper">
+    <section id="techstack">
+      <h2 class="section-title">Tech <span>Stack</span></h2>
+      <div class="stack-grid" id="stackGrid"></div>
+    </section>
+  </div>
+
+  <!-- CONTACTS -->
+  <div class="section-wrapper">
+    <section id="contacts">
+      <h2 class="section-title"><span>Contacts</span></h2>
+      <div class="contact-inner">
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span>Get In Touch!</span>
+        </div>
+        <div class="contact-info">
+          <p class="contact-text">
+            Feel free to connect with me for collaborations, job opportunities, or just to chat!
+          </p>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:romerosaangelo@gmail.com">romerosaangelo@gmail.com</a>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-phone"></i>
+            <span>+63 926 094 3705</span>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/AngeloJamesRomerosa" target="_blank" rel="noopener" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/angelo-romerosa-43b156310" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Angelo James Romerosa &nbsp;·&nbsp; Built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <!-- data.js must load before main.js -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+
+  .hero-inner { flex-direction: column; text-align: center; gap: 2rem; }
+  .hero-buttons, .hero-location { justify-content: center; }
+  .hero-name { font-size: 2.2rem; }
+  .hero-role { font-size: 1.3rem; }
+
+  .contact-inner { flex-direction: column; align-items: center; text-align: center; }
+  .contact-detail { justify-content: center; }
+  .social-links { justify-content: center; }
+}

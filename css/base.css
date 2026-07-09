@@ -1,0 +1,41 @@
+/* ============ RESET ============ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+/* ============ PARTICLES ============ */
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============ SECTION WRAPPER ============ */
+.section-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.section-wrapper + .section-wrapper {
+  border-top: 1px solid var(--border);
+}
+
+section {
+  padding: 5.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+.section-title span { color: var(--accent); }
