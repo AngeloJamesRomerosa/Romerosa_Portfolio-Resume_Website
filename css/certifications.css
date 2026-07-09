@@ -52,4 +52,23 @@
   font-size: 0.78rem;
   color: var(--accent);
   font-family: 'Fira Code', monospace;
+  margin-bottom: 0.75rem;
+}
+
+.cert-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.cert-view-btn:hover {
+  background: var(--accent);
+  color: #fff;
 }

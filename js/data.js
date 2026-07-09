@@ -36,30 +36,33 @@ const timelineData = [
 
 
 // ── CERTIFICATIONS ─────────────────────────────────────────────
-// icon  : emoji fallback shown when logoUrl is empty
+// icon   : emoji fallback shown when logoUrl is empty
 // logoUrl: URL to a logo — use a CDN URL, or a local file in images/certifications/
-//          e.g. logoUrl: "images/certifications/cisco.png"
+// certUrl: link to the certificate image/PDF — set to "" to hide the View button
 const certsData = [
   {
     issuer: "Cisco",
     title: "Linux Essentials",
     date: "April 2025",
     icon: "🔵",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png"
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png",
+    certUrl: ""  // add path to cert image/PDF here, e.g. "images/certifications/linux-essentials.jpg"
   },
   {
     issuer: "Cisco",
     title: "Introduction to Cybersecurity",
     date: "April 2025",
     icon: "🔵",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png"
+    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png",
+    certUrl: ""  // add path to cert image/PDF here
   },
   {
     issuer: "Cisco",
     title: "Networking Basics",
     date: "May 2025",
     icon: "🔵",
-    logoUrl: "images/certifications/Cisco Networking Basics.jpg"
+    logoUrl: "images/certifications/Cisco Networking Basics.jpg",
+    certUrl: "images/certifications/Cisco Networking Basics.jpg"
   }
   // Add more certifications:
   // { issuer: "Google", title: "Associate Cloud Engineer", date: "Jan 2026", icon: "🟢", logoUrl: "images/certifications/google.png" }

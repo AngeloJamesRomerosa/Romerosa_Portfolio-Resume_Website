@@ -26,6 +26,11 @@ function renderCerts() {
       <div class="cert-issuer">${c.issuer}</div>
       <div class="cert-title">${c.title}</div>
       <div class="cert-date">${c.date}</div>
+      ${c.certUrl
+        ? `<a href="${c.certUrl}" target="_blank" rel="noopener" class="cert-view-btn">
+             <i class="fas fa-eye"></i> View
+           </a>`
+        : ''}
     </div>
   `).join('');
 }
