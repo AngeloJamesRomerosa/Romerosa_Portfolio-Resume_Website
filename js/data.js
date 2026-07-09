@@ -53,11 +53,11 @@ const certsData = [
     date: "April 2025",
     icon: "🔵",
     logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png"
-  }
+  },
   {
     issuer: "Cisco",
     title: "Networking Basics",
-    date: "",
+    date: "May 2025",
     icon: "🔵",
     logoUrl: "images/certifications/Cisco Networking Basics.jpg"
   }
