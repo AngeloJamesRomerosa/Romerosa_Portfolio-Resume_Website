@@ -54,6 +54,13 @@ const certsData = [
     icon: "🔵",
     logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/200px-Cisco_logo.svg.png"
   }
+  {
+    issuer: "Cisco",
+    title: "Networking Basics",
+    date: "",
+    icon: "🔵",
+    logoUrl: "images/certifications/Cisco Networking Basics.jpg"
+  }
   // Add more certifications:
   // { issuer: "Google", title: "Associate Cloud Engineer", date: "Jan 2026", icon: "🟢", logoUrl: "images/certifications/google.png" }
 ];
