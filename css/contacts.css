@@ -1,4 +1,6 @@
 /* ============ CONTACTS ============ */
+
+/* Side-by-side: glowing card on left, contact details on right */
 .contact-inner {
   display: flex;
   align-items: flex-start;
@@ -6,6 +8,7 @@
   justify-content: center;
 }
 
+/* Fixed-size glowing box — flex-shrink:0 stops it from squishing */
 .contact-card {
   flex-shrink: 0;
   width: 190px;
@@ -32,6 +35,7 @@
   font-size: 0.95rem;
 }
 
+/* Each row: icon + text side by side */
 .contact-detail {
   display: flex;
   align-items: center;
@@ -39,10 +43,12 @@
   margin-bottom: 0.75rem;
   font-size: 0.92rem;
 }
+/* Fixed width keeps icons aligned even if sizes differ */
 .contact-detail i { color: var(--accent); width: 16px; text-align: center; }
 .contact-detail a { color: var(--text-primary); text-decoration: none; transition: color 0.2s; }
 .contact-detail a:hover { color: var(--accent); }
 
+/* Social icon buttons in a row — add more <a> tags to extend */
 .social-links { display: flex; gap: 0.75rem; margin-top: 1.25rem; }
 .social-links a {
   width: 42px;
@@ -72,5 +78,5 @@ footer {
   font-size: 0.78rem;
   border-top: 1px solid var(--border);
   position: relative;
-  z-index: 1;
+  z-index: 1; /* sits above the particle canvas (z-index: 0) */
 }

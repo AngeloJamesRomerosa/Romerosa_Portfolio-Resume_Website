@@ -1,4 +1,6 @@
 /* ============ TECH STACK ============ */
+
+/* auto-fill: adds as many 96px columns as fit; extras wrap to next row */
 .stack-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));

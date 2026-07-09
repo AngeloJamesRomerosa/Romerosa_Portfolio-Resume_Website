@@ -5,6 +5,7 @@
   max-width: 700px;
   margin: 0 auto;
 }
+/* ::before draws the vertical gradient line running down the left edge */
 .timeline::before {
   content: '';
   position: absolute;
@@ -20,6 +21,7 @@
 }
 .timeline-item:last-child { margin-bottom: 0; }
 
+/* ::before draws the glowing dot on the line for each entry */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -74,7 +76,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Small doc thumbnails shown inline under a timeline entry */
+/* flex-wrap: wrap — thumbnails flow left→right, then wrap to the next row */
 .timeline-docs {
   display: flex;
   flex-wrap: wrap;

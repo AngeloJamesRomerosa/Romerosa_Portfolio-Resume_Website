@@ -1,4 +1,5 @@
 // ── RENDERERS ─────────────────────────────────────────────────
+// Each function reads its data array from data.js and injects HTML into the matching container
 
 function renderTimeline() {
   document.getElementById('timeline').innerHTML = timelineData.map(item => `
@@ -84,6 +85,7 @@ function renderStack() {
 }
 
 // ── TYPEWRITER ─────────────────────────────────────────────────
+// Cycles through roles[], typing then deleting each word character by character
 const roles = ["AI/ML Engineer", "Backend Developer", "Problem Solver", "Tech Enthusiast"];
 let ri = 0, ci = 0, deleting = false;
 const tw = document.getElementById('typewriter');
@@ -101,12 +103,14 @@ const tw = document.getElementById('typewriter');
 })();
 
 // ── THEME TOGGLE ───────────────────────────────────────────────
+// Flips data-theme on <html> between "dark" and "light"; CSS variables handle the rest
 document.getElementById('themeToggle').addEventListener('click', () => {
   const html = document.documentElement;
   html.setAttribute('data-theme', html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
 });
 
 // ── PARTICLE BACKGROUND ────────────────────────────────────────
+// 90 dots move continuously on a full-page canvas; color adapts to current theme
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 let W = canvas.width = innerWidth;

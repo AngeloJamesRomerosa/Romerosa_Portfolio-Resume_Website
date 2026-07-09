@@ -1,4 +1,6 @@
 /* ============ CERTIFICATIONS ============ */
+
+/* auto-fill: adds as many 210px columns as fit; extras wrap to next row */
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
@@ -21,7 +23,7 @@
   transform: translateY(-4px);
 }
 
-/* Large cert image shown directly on the card */
+/* Full-width image strip at the top of the card — shows cert without clicking */
 .cert-preview {
   width: 100%;
   height: 160px;
@@ -37,7 +39,7 @@
 }
 .cert-card:hover .cert-preview img { transform: scale(1.03); }
 
-/* Body below the image (or below logo if no image) */
+/* flex:1 makes body grow to fill remaining card height */
 .cert-card-body {
   padding: 1rem 1.25rem 1.25rem;
   flex: 1;
@@ -46,7 +48,7 @@
   align-items: center;
 }
 
-/* Fallback logo when no certImage */
+/* Fallback square logo shown instead of cert-preview when certImage is absent */
 .cert-logo {
   width: 52px;
   height: 52px;
