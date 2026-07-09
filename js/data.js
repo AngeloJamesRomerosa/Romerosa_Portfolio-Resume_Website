@@ -93,11 +93,19 @@ const certsData = [
 const projectsData = [
   {
     title: "AI Livestreaming AKOOL",
-    image: "",  // e.g. "images/projects/ai-livestream.png"
+    image: "",
     tags: ["Python", "FastAPI", "Docker", "Agora RTC", "AKOOL API", "Vanilla JS", "WebSocket"],
     description: "Real-time AI face-swap livestreaming platform. FastAPI backend with WebSocket streaming, browser-side background removal via MediaPipe, and AKOOL's Live Faceswap API. Containerised with Docker and deployed on Render.",
     liveUrl: "https://ai-livestreaming-akool-render.onrender.com/",
     codeUrl: "https://github.com/AngeloJamesRomerosa/AI_Livestreaming_AKOOL_Render"
+  },
+  {
+    title: "MediaPipe Segmenter & Landmarker",
+    image: "",
+    tags: ["Python", "FastAPI", "MediaPipe", "JavaScript", "WebAssembly", "WebGL", "Docker"],
+    description: "Real-time background removal and body landmark overlay running entirely in the browser via MediaPipe Tasks Vision JS. Detects pose, hand, and facial landmarks using WebAssembly and WebGL — no server-side inference.",
+    liveUrl: "https://mediapipe-bg-landmarks.onrender.com",
+    codeUrl: "https://github.com/AngeloJamesRomerosa/Mediapipe_Segmenter_Landmarker"
   }
   // Add more projects:
   // {
