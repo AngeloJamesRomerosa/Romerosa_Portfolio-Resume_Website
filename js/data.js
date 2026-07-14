@@ -101,7 +101,7 @@ const projectsData = [
   },
   {
     title: "MediaPipe Segmenter & Landmarker",
-    image: "",
+    image: "images/projects/MediaPipe/MediaPipe_Test.jpg",
     tags: ["Python", "FastAPI", "MediaPipe", "JavaScript", "WebAssembly", "WebGL", "Docker"],
     description: "Real-time background removal and body landmark overlay running entirely in the browser via MediaPipe Tasks Vision JS. Detects pose, hand, and facial landmarks using WebAssembly and WebGL — no server-side inference.",
     liveUrl: "https://mediapipe-bg-landmarks.onrender.com",
@@ -109,7 +109,7 @@ const projectsData = [
   },
   {
     title: "INFONest News Summarizer",
-    image: "",
+    image: "images/projects/InfoNest/Info.jpg",
     tags: ["Python", "Streamlit", "DistilBART", "TextRank", "Whisper", "BeautifulSoup4", "PyTorch"],
     description: "Philippine-focused news aggregator that fetches live articles and YouTube news videos, then generates AI-powered summaries using extractive and abstractive techniques. Supports category browsing, topic search, and light/dark themes.",
     liveUrl: "https://infonest-app.streamlit.app/",
