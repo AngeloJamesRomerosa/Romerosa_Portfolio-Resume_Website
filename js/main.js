@@ -50,14 +50,19 @@ function renderCerts() {
   `).join('');
 }
 
+function ytId(url) { return url.split('/embed/')[1]?.split('?')[0] || ''; }
+
 function renderProjects() {
   document.getElementById('projectsGrid').innerHTML = projectsData.map(p => `
     <div class="project-card">
       <div class="project-thumb">
         ${p.videoUrl
-          ? `<iframe src="${p.videoUrl}" title="${p.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+          ? `<div class="thumb-video-poster" data-video="${p.videoUrl}">
+               <img src="https://img.youtube.com/vi/${ytId(p.videoUrl)}/hqdefault.jpg" alt="${p.title}" />
+               <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+             </div>`
           : p.image
-            ? `<img src="${p.image}" alt="${p.title}" />`
+            ? `<img src="${p.image}" alt="${p.title}" class="thumb-clickable" data-image="${p.image}" />`
             : `<div class="thumb-placeholder"><i class="fas fa-image"></i><span>Add screenshot</span></div>`}
       </div>
       <div class="project-body">
@@ -148,8 +153,37 @@ window.addEventListener('resize', () => {
   requestAnimationFrame(frame);
 })();
 
+// ── LIGHTBOX ───────────────────────────────────────────────────
+// Opens a full-screen overlay showing an image or YouTube video
+const lightbox = document.getElementById('lightbox');
+const lightboxBody = document.getElementById('lightboxBody');
+
+function openLightbox(html) {
+  lightboxBody.innerHTML = html;
+  lightbox.classList.add('open');
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightboxBody.innerHTML = '';
+}
+
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+function bindProjectThumbs() {
+  document.querySelectorAll('.thumb-video-poster[data-video]').forEach(el => {
+    el.addEventListener('click', () => openLightbox(
+      `<iframe src="${el.dataset.video}?autoplay=1" allow="autoplay; fullscreen" allowfullscreen></iframe>`
+    ));
+  });
+  document.querySelectorAll('.thumb-clickable[data-image]').forEach(el => {
+    el.addEventListener('click', () => openLightbox(`<img src="${el.dataset.image}" />`));
+  });
+}
+
 // ── INIT ───────────────────────────────────────────────────────
 renderTimeline();
 renderCerts();
 renderProjects();
 renderStack();
+bindProjectThumbs();
