@@ -33,6 +33,7 @@
   flex-shrink: 0;
 }
 .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.project-thumb iframe { width: 100%; height: 100%; border: none; }
 
 .thumb-placeholder {
   display: flex;

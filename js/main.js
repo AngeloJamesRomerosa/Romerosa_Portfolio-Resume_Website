@@ -54,9 +54,11 @@ function renderProjects() {
   document.getElementById('projectsGrid').innerHTML = projectsData.map(p => `
     <div class="project-card">
       <div class="project-thumb">
-        ${p.image
-          ? `<img src="${p.image}" alt="${p.title}" />`
-          : `<div class="thumb-placeholder"><i class="fas fa-image"></i><span>Add screenshot</span></div>`}
+        ${p.videoUrl
+          ? `<iframe src="${p.videoUrl}" title="${p.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+          : p.image
+            ? `<img src="${p.image}" alt="${p.title}" />`
+            : `<div class="thumb-placeholder"><i class="fas fa-image"></i><span>Add screenshot</span></div>`}
       </div>
       <div class="project-body">
         <div class="project-title">${p.title}</div>

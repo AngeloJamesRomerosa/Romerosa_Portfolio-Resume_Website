@@ -94,6 +94,7 @@ const projectsData = [
   {
     title: "AI Livestreaming AKOOL",
     image: "",
+    videoUrl: "https://www.youtube.com/embed/TTy7sSAHSjE",
     tags: ["Python", "FastAPI", "Docker", "Agora RTC", "AKOOL API", "Vanilla JS", "WebSocket"],
     description: "Real-time AI face-swap livestreaming platform. FastAPI backend with WebSocket streaming, browser-side background removal via MediaPipe, and AKOOL's Live Faceswap API. Containerised with Docker and deployed on Render.",
     liveUrl: "https://ai-livestreaming-akool-render.onrender.com/",
